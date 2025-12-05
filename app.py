@@ -20,7 +20,7 @@ app.config.update(
     SESSION_COOKIE_SAMESITE="Lax"
 )
 
-# Limite requêtes
+# Limite requêtes 
 app.config["MAX_CONTENT_LENGTH"] = 2 * 1024 * 1024
 
 # DB obligatoire
