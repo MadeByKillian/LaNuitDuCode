@@ -1,0 +1,44 @@
+{% extends "header.html" %}
+{% block title %}Inscription | Nuit Info{% endblock %}
+{% block content %}
+    <style>
+        .login-container{max-width:450px;margin:80px auto;padding:40px;background:var(--bg-secondary);border-radius:20px;box-shadow:0 20px 60px var(--shadow-color);border:2px solid var(--accent-color)}
+        .login-title{font-size:2.2rem;font-weight:900;text-align:center;margin-bottom:30px;background:linear-gradient(135deg,var(--accent-color),#764ba2);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .form-group{margin-bottom:20px}
+        .form-label{display:block;font-weight:600;margin-bottom:8px;color:var(--text-primary);font-size:1rem}
+        .form-input{width:100%;padding:12px 15px;border:2px solid var(--shadow-color);border-radius:10px;font-size:1rem;background:var(--bg-primary);color:var(--text-primary);transition:all .3s ease}
+        .form-input:focus{border-color:var(--accent-color);outline:none;box-shadow:0 0 0 3px var(--accent-glow)}
+        .login-btn{width:100%;padding:14px;background:var(--accent-color);color:#fff;font-size:1.1rem;font-weight:700;border:none;border-radius:10px;cursor:pointer;transition:all .3s ease;margin-top:10px}
+        .login-btn:hover{background:#ff3a39;transform:translateY(-2px);box-shadow:0 8px 20px var(--accent-glow)}
+        #error-message {color: #ff3a39;font-style: italic;font-weight: 600;text-align: center;margin-bottom: 20px;font-size: 16px;}
+        @keyframes fadeIn{0%{opacity:0;transform:translateY(-10px)}100%{opacity:1;transform:translateY(0)}}
+        .back-link{text-align:center;margin-top:20px}
+        .back-link a{color:var(--accent-color);text-decoration:none;font-weight:600;transition:color .3s ease;cursor:pointer}
+        .back-link a:hover{color:#764ba2}
+    </style>
+        <div class="login-container">
+            <h1 class="login-title">Inscription</h1>
+            {% if message %}
+                <div class="error-message" id="error-message">{{message}}</div>
+            {% endif %}
+            <form action="/inscription" method="POST">
+                <div class="form-group">
+                    <label class="form-label" for="username">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Entrez votre email" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="password">Mot de passe</label>
+                    <input type="password" id="mdp" name="mdp" class="form-input" placeholder="Entrez votre mot de passe" required autocomplete="new-password">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="confirm-password">Confirmer le mot de passe</label>
+                    <input type="password" id="mdp2" name="mdp2" class="form-input" placeholder="Confirmez votre mot de passe" required autocomplete="new-password">
+                </div>
+                <button type="submit" class="login-btn" data-testid="inscription-submit-btn">S'inscrire</button>
+            </form>
+            <div class="back-link">
+                <a href="/connexion">Déjà un compte ? Connectez-vous</a>
+            </div>
+        </div>
+
+{% endblock %}

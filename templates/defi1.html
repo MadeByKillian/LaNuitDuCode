@@ -1,0 +1,52 @@
+{% extends "header.html" %}
+{% block title %}Defi 1 | Nuit Info{% endblock %}
+{% block content %}
+        <div class="content-wrapper">
+            <div class="hero-section">
+                <div class="defi-content">
+                    <h1 class="defi-title">Défi 1 - Femmes et informatique</h1>
+                    <div class="text-block">
+                        <p class="defi-text">
+                            Notre projet met à l'honneur les femmes qui ont marqué l'histoire de l'informatique et celles qui, aujourd'hui, 
+                            façonnent la technologie de demain. À travers un flyer et une vidéo dynamique, nous rappelons que les pionnières 
+                            de la Tech ont posé les bases de la programmation, des systèmes embarqués, du cloud et des outils que nous utilisons chaque jour.
+                        </p>
+                        <p class="defi-text">
+                            Malgré ces contributions majeures, les femmes restent encore sous-représentées dans le secteur. Notre initiative vise 
+                            à sensibiliser à la mixité et à encourager davantage d'étudiantes à rejoindre les métiers du numérique.
+                        </p>
+                        <p class="defi-text">
+                            En valorisant leur rôle et leur impact, nous souhaitons montrer que l'innovation est plus forte lorsque toutes et tous 
+                            y participent. Ce projet est un hommage, mais aussi un appel à agir pour une Tech plus inclusive, plus diversifiée et plus inspirante.
+                        </p>
+                        <p class="defi-text">
+                            Depuis Ada Lovelace, la première programmeuse, jusqu'aux ingénieures et entrepreneuses d'aujourd'hui, les femmes ont 
+                            toujours été au cœur des grandes avancées informatiques. Des pionnières comme Grace Hopper, qui a développé le premier 
+                            compilateur, et Margaret Hamilton, dont le code a permis l'alunissage d'Apollo 11, sont des figures clés.
+                        </p>
+                    </div>
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='img/affiche.png') }}" alt="Affiche Femmes et Informatique" class="defi-image" loading="lazy">
+                    </div>
+                    <div class="text-block">
+                        <p class="defi-text">
+                            Pourtant, malgré ces contributions historiques et actuelles, les femmes restent sous-représentées dans les formations 
+                            et métiers du numérique.
+                        </p>
+                        <p class="defi-text">
+                            Ce flyer met en lumière leurs réussites, inspire les vocations et rappelle que la diversité est un moteur d'innovation.
+                        </p>
+                        <p class="defi-text">
+                            Ensemble, encourageons la mixité et faisons grandir un numérique inclusif où chacun·e a sa place.
+                        </p>
+                    </div>
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <p class="video-text">📹 Vidéo à venir</p>
+                            <p class="video-subtitle">Espace réservé pour la vidéo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
